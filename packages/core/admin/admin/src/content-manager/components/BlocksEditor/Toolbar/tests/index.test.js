@@ -13,7 +13,7 @@ import { BlocksToolbar } from '..';
 const initialValue = [
   {
     type: 'paragraph',
-    children: [{ text: 'A line of text in a paragraph.' }],
+    children: [{ type: 'text', text: 'A line of text in a paragraph.' }],
   },
 ];
 
@@ -77,14 +77,17 @@ describe('BlocksEditor toolbar', () => {
         type: 'paragraph',
         children: [
           {
+            type: 'text',
             text: 'A ',
           },
           {
+            type: 'text',
             text: 'line of text',
             bold: true,
             italic: true,
           },
           {
+            type: 'text',
             text: ' in a paragraph.',
           },
         ],
@@ -134,6 +137,7 @@ describe('BlocksEditor toolbar', () => {
             type: 'list-item',
             children: [
               {
+                type: 'text',
                 text: 'A line of text in a paragraph.',
               },
             ],
